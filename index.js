@@ -13,10 +13,21 @@ function createWindow(){
         autoHideMenuBar : true
     })
 
+    win.loadFile(__dirname + '/renderer/index.html')
 
+
+    win.addListener('ready-to-show' , () =>{
+        win.show()
+    })
 
 }
 
 app.whenReady().then(() => {
     createWindow
 }) 
+
+app.addListener('window-all-closed' , () => {
+    if(process.platform !== 'darwin'){
+        app.quit()
+    }
+})
