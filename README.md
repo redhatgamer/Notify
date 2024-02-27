@@ -13,3 +13,16 @@ The app is user-friendly and syncs across your devices, making it a handy tool t
 ## Table of Contents
 
 (insert screenshots)
+
+
+
+
+## Dependencies
+
+1. Install yarn
+
+
+2. Install electron
+
+
+3. Install database
