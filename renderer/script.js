@@ -1,17 +1,18 @@
-let{ipcRenderer} = require('electron')
+const { ipcRenderer } = require('electron');
 
-let title = document.getElementById('title')
+document.addEventListener('DOMContentLoaded', async () => {
+    let notes = await ipcRenderer.invoke('get_data');
+    console.log(notes);
+});
 
-let note = document.getElementById('note')
+document.getElementById('btn').onclick = () => {
+    let title = document.getElementById('title').value;
+    let noteText = document.getElementById('note').value;
 
-let btn = document.getElementById('btn')
-
-btn.onclick = () => {
-    if(title !== "" && note !== ""){
-        let _note = { note, title}
-
-        ipcRenderer.send('save_note', _note);
-    }else{
-        window.alert("please fill all the things and try again")
+    if (title.trim() !== "" && noteText.trim() !== "") {
+        let note = { title, note: noteText };
+        ipcRenderer.send('save_note', note);
+    } else {
+        window.alert("Please fill in all the fields and try again.");
     }
-}
+};

@@ -1,0 +1,11 @@
+{
+  "name": "notify",
+  "version": "1.0.0",
+  "description": "this is a notes app",
+  "main": "main.js",
+  "scripts": {
+    "dev": "electron main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

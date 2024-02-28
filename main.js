@@ -1,4 +1,4 @@
-const { menubar } = require('menubar');
+// const { menubar } = require('menubar');
 const { app, Menu, BrowserWindow, ipcMain } = require('electron');
 const path = require('node:path');
 let Datastore = require('nedb');
@@ -19,7 +19,7 @@ function createWindow() {
     autoHideMenuBar: false,
   });
 
-  mainWindow.loadFile('Tech-Talent-Academy-TTA-Spring-2024/renderer/index.html');
+  mainWindow.loadFile('renderer/index.html');
 
   const menuTemplate = [
     {
@@ -49,7 +49,7 @@ function createWindow() {
   });
 }
 
-function initDatstore() {
+function initDatastore() {
   let userDataPath = app.getPath('userData');
 
   datastore = new Datastore({
@@ -67,7 +67,7 @@ function initDatstore() {
 }
 
 app.whenReady().then(() => {
-  initDatstore();
+  initDatastore();
   createWindow();
 });
 
@@ -84,5 +84,26 @@ app.on('activate', () => {
 });
 
 ipcMain.on('save_note', (e, note) => {
+  datastore.insert(note, (err, new_doc) => {
+    console.log(new_doc);
+    if(err){
+      console.log("There was some error in inserting the doc")
+      throw err;
+    }else{
+      console.log("Data inserted successfully")
+    }
+  });
   // Add your logic to handle the 'save_note' event here
+});
+
+ipcMain.handle('get_data', (e) => {
+  return new Promise((resolve, reject) => {
+    datastore.find({} , (err, docs) => {
+      if(err){
+        reject(err);
+      }else{
+        resolve(docs);
+      }
+    })
+  })
 });
