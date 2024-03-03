@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-const { app, BrowserWindow } = require('electron');
-
-let mainWindow;
-
-function createWindow() {
-  mainWindow = new BrowserWindow({
-=======
 // const { menubar } = require('menubar');
 const { app, Menu, BrowserWindow, ipcMain } = require('electron');
 const path = require('node:path');
@@ -17,21 +9,12 @@ let datastore;
 function createWindow() {
   mainWindow = new BrowserWindow({
     menubar: true,
->>>>>>> a1c2fa2efa8ad5f89039feffebe8fd33da21ec7d
     width: 800,
     height: 600,
     webPreferences: {
       nodeIntegration: true,
-<<<<<<< HEAD
-    },
-  });
-
-  mainWindow.loadFile('index.html');
-
-  mainWindow.on('closed', function () {
-=======
       contextIsolation: false,
-      preload: path.join(app.getAppPath(), 'Tech-Talent-Academy-TTA-Spring-2024', 'main.js'), // Correct the path to your preload script
+      preload: path.join(app.getAppPath(), 'Tech-Talent-Academy-TTA-Spring-2024', 'renderer.js'), // Correct the path to your preload script
     },
     autoHideMenuBar: false,
   });
@@ -62,21 +45,10 @@ function createWindow() {
   mainWindow.webContents.openDevTools();
 
   mainWindow.on('closed', () => {
->>>>>>> a1c2fa2efa8ad5f89039feffebe8fd33da21ec7d
     mainWindow = null;
   });
 }
 
-<<<<<<< HEAD
-app.whenReady().then(createWindow);
-
-app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') app.quit();
-});
-
-app.on('activate', function () {
-  if (mainWindow === null) createWindow();
-=======
 function initDatastore() {
   let userDataPath = app.getPath('userData');
 
@@ -134,5 +106,7 @@ ipcMain.handle('get_data', (e) => {
       }
     })
   })
->>>>>>> a1c2fa2efa8ad5f89039feffebe8fd33da21ec7d
 });
+
+
+

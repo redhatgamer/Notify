@@ -43,3 +43,28 @@ body{
     box-shadow: 1px 1px 15px #ddd;
     
 }
+
+.animated-button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.animated-button:hover{
+    background-color: #2980b9;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+.animated {
+    animation: pulse 1s infinite;
+}
