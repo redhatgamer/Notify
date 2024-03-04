@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+
     <title>Notify</title>
     <style>
         body {
@@ -13,7 +15,25 @@
     </style>
 </head>
 <body>
-    <div class="nav"> Notify</div>
+
+    <!-- <div class="nav"> Notify</div> -->
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Hello, user!</header>
+        <ul>
+            <li><a href="#"><i class="fas fa-qrcode"></i>New Note</a></li>
+            <li><a href="#"><i class="fas fa-tasks"></i>New To-Do</a></li>
+            <li><a href="#"><i class="fas fa-book"></i>New Notebook</a></li>
+            <li><a href="#"><i class="fas fa-door-open"></i>Quit</a></li>
+            <li><a href="#"><i class="fas fa-print"></i>Print</a></li>
+            <li><a href="#"><i class="fas fa-info-circle"></i>About</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i>Contact</a></li>
+        </ul>
+    </div>
     <h1 style="padding-left: 20px;">Create a new note</h1>
     <div>
         <input class="text" id="title" placeholder="Title of the note">
