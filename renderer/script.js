@@ -8,7 +8,7 @@ function loadNotes(){
     list.innerHTML = "";
     notes.forEach((note, idx) => {
         list.innerHTML += `
-            <div class="list-ele">
+            <div class="list_ele">
                 <h1>${idx} ${note.title} <h1>
                 <p> ${note.note} <p>
             <div>
@@ -37,3 +37,27 @@ btn.onclick = () => {
         window.alert("Please fill in all the fields and try again.");
     }
 };
+
+function setUpDeleteButton(){
+    document.getElementById('deleteButton').addEventListener('click', function(event){
+        const noteId = event.target.getAttribute('data-note-id');
+
+        deleteNote(noteId);
+
+        renderNotes();
+    });
+}
+
+
+function deleteNote(noteId) {
+    // Use NeDB's remove function to delete the note with the given id
+    db.remove({ _id: noteId }, {}, function (err, numRemoved) {
+      if (err) {
+        console.error('Error deleting note:', err);
+      } else {
+        console.log(`Deleted ${numRemoved} note(s) with id ${noteId}`);
+      }
+    });
+  }
+
+setUpDeleteButton();
