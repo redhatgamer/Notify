@@ -20,6 +20,7 @@ function createWindow() {
 
   const menuTemplate = [
     {
+
       label: 'label 1',
       label: 'File',
       submenu: [
@@ -47,6 +48,34 @@ function createWindow() {
       label: 'Edit',
       submenu: [
         {
+
+      label: 'File',
+      submenu: [
+        {
+          label: 'New Note',
+          accelerator: 'CmdOrCtrl+N',
+        },
+        {
+          label: 'New To-Do',
+          accelerator: 'CmdOrCtrl+T',
+        },
+        {
+          label: 'New Notebook',
+        },
+        {
+          label: 'Quit',
+          accelerator: 'CmdOrCtrl+Q',
+        },
+        {
+          label: 'Print',
+        },
+      ],
+    },
+    {
+      label: 'Edit',
+      submenu: [
+        {
+
           label: 'Copy',
           accelerator: 'CmdOrCtrl+C',
         },
@@ -66,7 +95,9 @@ function createWindow() {
           role: 'undo',
         },
         {
+
           role: 'cut',
+
           label: 'Redo',
           role: 'redo',
         },
@@ -91,6 +122,7 @@ function createWindow() {
         },
         {
           role: 'close',
+
           label: 'Code',
         },
       ],
