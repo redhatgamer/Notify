@@ -38,26 +38,26 @@ btn.onclick = () => {
     }
 };
 
-function setUpDeleteButton(){
-    document.getElementById('deleteButton').addEventListener('click', function(event){
-        const noteId = event.target.getAttribute('data-note-id');
+// function setUpDeleteButton(){
+//     document.getElementById('deleteButton').addEventListener('click', function(event){
+//         const noteId = event.target.getAttribute('data-note-id');
 
-        deleteNote(noteId);
+//         deleteNote(noteId);
 
-        renderNotes();
-    });
-}
+//         renderNotes();
+//     });
+// }
 
 
-function deleteNote(noteId) {
-    // Use NeDB's remove function to delete the note with the given id
-    db.remove({ _id: noteId }, {}, function (err, numRemoved) {
-      if (err) {
-        console.error('Error deleting note:', err);
-      } else {
-        console.log(`Deleted ${numRemoved} note(s) with id ${noteId}`);
-      }
-    });
-  }
+// function deleteNote(noteId) {
+//     // Use NeDB's remove function to delete the note with the given id
+//     db.remove({ _id: noteId }, {}, function (err, numRemoved) {
+//       if (err) {
+//         console.error('Error deleting note:', err);
+//       } else {
+//         console.log(`Deleted ${numRemoved} note(s) with id ${noteId}`);
+//       }
+//     });
+//   }
 
-setUpDeleteButton();
+// setUpDeleteButton();
