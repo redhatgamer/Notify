@@ -14,15 +14,26 @@ The app is user-friendly and syncs across your devices, making it a handy tool t
 
 (insert screenshots)
 
+## Install Dependencies
 
+1. Clone Repository
+<!-- git clone [repository_url] -->
 
+2. Install Node.js
+<!-- https://nodejs.org/en/download/ -->
 
-## Dependencies
+3. Install electron
+<!-- npm install --save-dev electron -->
 
-1. Install yarn
+4. Install nedB
+<!-- npm install nedb --save   -->
 
+5. Run program
+<!-- npm run dev -->
 
-2. Install electron
+## Contributing
 
-
-3. Install database
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Submit a pull request.
