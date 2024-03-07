@@ -22,7 +22,8 @@ document.getElementById('quitBtn').addEventListener('click', function() {
     const confirmed = confirm('Are you sure you want to quit?');
         
     if (confirmed) {
-       window.close();
+        const currentWindow = window.open('', '_self');
+        currentWindow.close();
     } else {
         // User canceled the quit action
         alert('Quit action canceled.');
