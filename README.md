@@ -1,6 +1,4 @@
-## Title
-
-Welcome To Notify
+# Welcome To Notify
 
 ## Description
 
@@ -14,15 +12,28 @@ The app is user-friendly and syncs across your devices, making it a handy tool t
 
 (insert screenshots)
 
+## Install Dependencies
+```
+# Clone Repository
+git clone [repository_url]
 
+# Install Node.js
+https://nodejs.org/en/download/
 
+# Install electron
+npm install --save-dev electron
 
-## Dependencies
+# Install nedB
+npm install nedb --save
 
-1. Install yarn
+# Run program
+npm run dev
+```
+## Contributing
 
-
-2. Install electron
-
-
-3. Install database
+```
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Submit a pull request.
+```
