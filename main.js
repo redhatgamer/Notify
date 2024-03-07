@@ -94,15 +94,19 @@ app.on('activate', () => {
 });
 
 ipcMain.on('save_note', (event, note) => {
+  console.log('Received save_note event with note:', note);
+
   datastore.insert(note, (err, newDoc) => {
     if (err) {
-      console.error('There was some error in inserting the doc');
-      throw err;
+      console.error('Error inserting the document:', err);
+      event.sender.send('save_note_error', err.message); // Sending an error response to the renderer process
     } else {
       console.log('Data inserted successfully', newDoc);
+      event.sender.send('save_note_success', newDoc); // Sending a success response to the renderer process
     }
   });
 });
+
 
 ipcMain.handle('get_data', async (event) => {
   try {
