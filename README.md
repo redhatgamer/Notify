@@ -1,5 +1,3 @@
-## Title
-
 Welcome To Notify
 
 ## Description
