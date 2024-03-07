@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Quick Reminder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #reminderInput {
+            width: 60%;
+            padding: 8px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        #reminderList {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reminderItem {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+            background-color: white;
+        }
+
+        .deleteButton {
+            background-color: #ff5555;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+
+
+    <style>
+        body{
+
+background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg/1200px-Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg");
+background-size: cover; /* Adjust to 'contain' if needed */
+background-repeat: no-repeat;
+background-attachment: fixed; /* Fixed or scroll, depending on your preference */
+/* Add any additional styles you want */
+margin: 0; /* Remove default body margin */
+ /* Remove default body padding */
+/* Optionally, you can set a background color as a fallback */
+background-color: #f0f0f0;
+}
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Hello, user!</header>
+        <ul>
+            <li><a href="#" id="newHomeBtn"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="#" id="newNoteBtn"><i class="fas fa-qrcode"></i>New Note</a></li>
+            <li><a href="#" id="newTodoBtn"><i class="fas fa-tasks"></i>New To-Do</a></li>
+            <li><a href="#" id="printBtn"><i class="fas fa-print"></i>Print</a></li>
+            <li><a href="#" id="aboutBtn"><i class="fas fa-info-circle"></i>About</a></li>
+            <li><a href="#" id="quitBtn"><i class="fas fa-times"></i>Quit</a></li>
+        </ul>
+
+        <div>
+            <script src="./sidebar.js"></script>
+        </div>
+    </div>
+
+<h1>Quick Reminder</h1>
+
+<input type="text" id="reminderInput" placeholder="Type your reminder...">
+<button onclick="addReminder()">Add Reminder</button>
+
+<ul id="reminderList"></ul>
+
+<script>
+    function addReminder() {
+        // Get the input value
+        var reminderText = document.getElementById('reminderInput').value;
+
+        if (reminderText.trim() !== '') {
+            // Create a new list item
+            var listItem = document.createElement('li');
+            listItem.className = 'reminderItem';
+
+            // Create a span for the reminder text
+            var reminderSpan = document.createElement('span');
+            reminderSpan.textContent = reminderText;
+
+            // Create a button for deleting the reminder
+            var deleteButton = document.createElement('button');
+            deleteButton.className = 'deleteButton';
+            deleteButton.textContent = 'Delete';
+            deleteButton.onclick = function() {
+                // Remove the corresponding list item when the delete button is clicked
+                listItem.remove();
+            };
+
+            // Append the elements to the list item
+            listItem.appendChild(reminderSpan);
+            listItem.appendChild(deleteButton);
+
+            // Append the list item to the reminder list
+            document.getElementById('reminderList').appendChild(listItem);
+
+            // Clear the input field
+            document.getElementById('reminderInput').value = '';
+        }
+    }
+</script>
+
+<script src="sidebar.js"></script>
+
+</body>
+</html>

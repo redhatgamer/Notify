@@ -5,12 +5,16 @@
 });
 
 document.getElementById('newTodoBtn').addEventListener('click', function() {
-    alert('New To-Do button clicked!');
-    // Add your logic here for creating a new to-do
+    // alert('New To-Do button clicked!');
+    // // Add your logic here for creating a new to-do
+
+    window.location.href = "reminder.html";
+    
+
 });
 
-document.getElementById('newNotebookBtn').addEventListener('click', function() {
-    alert('New Notebook button clicked!');
+document.getElementById('newHomeBtn').addEventListener('click', function() {
+    window.location.href = "index.html";
     // Add your logic here for creating a new notebook
 });
 
