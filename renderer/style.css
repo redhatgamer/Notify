@@ -181,6 +181,43 @@ label #cancel{
     
 }
 
+.custom-btn{
+    font-family: 'Poppins', sans-serif;
+   padding: 9px 10px; 
+   font-size: 15px;
+   margin: 0px;
+   background: none;
+   color:#fff;
+   border: 1px solid #666;
+   position: relative;
+}
+
+.custom-btn::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: -2px;
+    height: 20px;
+    width: 65px;
+    background-color: #868686;
+    transform: perspective(80px) rotateX(-120deg);
+    filter: blur(20px);
+}
+
+.active, .custom-btn:hover{
+    background-color:#9eb6c2;
+    color: #000;
+    box-shadow: 0 0 26px 1px#0a5275;
+    border: 1px solid #9eb6c2;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#mydiv{
+    text-align: center;
+}
 /* #quitBtn{
     color: red;
 } */
