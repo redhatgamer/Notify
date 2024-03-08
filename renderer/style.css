@@ -215,6 +215,10 @@ label #cancel{
     font-weight: bold;
 }
 
+.italic{
+    font-style: italic;
+}
+
 #mydiv{
     text-align: center;
 }

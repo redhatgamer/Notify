@@ -14,3 +14,8 @@ var header = document.getElementById("mydiv");
         //elem.classList.toggle('active');
         document.getElementById('note').classList.toggle('bold');
     }
+
+    function makeItalic(elem){
+        //elem.classList.toggle('active');
+        document.getElementById('note').classList.toggle('italic');
+    }
