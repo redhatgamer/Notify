@@ -24,31 +24,6 @@ h1{
     text-align: center;
 }
 
-.navbar ul{
-    list-style-type: none;
-    background-color: hsl(0,0%,25%);
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-}
-
-.navbar a{
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    text-align: center;
-}
-
-.navbar a:hover{
-    background-color: hsl(0,0%,10%);
-}
-
-.navbar li{
-    float: left;
-
-}
-
 body{
     padding-top: 100px;
 }
@@ -59,6 +34,8 @@ body{
     list-style: none;
     text-decoration: none;
 }
+
+/* sidebar */
 
 .sidebar{
     margin-top: -100px;
@@ -95,9 +72,9 @@ body{
     transition: .4s;
 }
 
-/* Add this to your existing CSS styles */
+
 .sidebar ul li a i {
-    margin-right: 8px; /* Adjust the spacing as needed */
+    margin-right: 8px; 
 }
 
 ul li:hover a{
@@ -159,10 +136,14 @@ label #cancel{
     margin: 20px;
 }
 
+/* note */
+
 #note{
     margin: 20px;
     width: 94%;
 }
+
+/* save button */
 
 .btn{
     background-color: blue;
@@ -173,6 +154,7 @@ label #cancel{
     text-align: center;
 }
 
+/* note list */
 
 .list_ele{
     margin: 20px;
@@ -180,6 +162,8 @@ label #cancel{
     box-shadow: 1px 1px 15px black;
     
 }
+
+/* login body */
 
 .loginInfo{
     display: flex;
@@ -290,6 +274,35 @@ label #cancel{
 .register-link p a:hover{
     text-decoration: underline;
 }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 14px 16px;
+}
+
+.navbar i {
+  color: white;
+  margin-right: 16px; /* Adjust the spacing between the icon and the checkbox */
+}
+
+.navbar input {
+  margin-left: 16px; /* Adjust the spacing between the icon and the checkbox */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 16px; /* Adjust the spacing between items */
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
 /* #quitBtn{
     color: red;
 } */
+
+
