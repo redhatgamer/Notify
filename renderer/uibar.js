@@ -32,7 +32,7 @@ var header = document.getElementById("mydiv");
 
     function alignText(elem, alignType){
         elem.classList.toggle('active');
-        document.getElementById('note').classList.style.textAlign = alignType;
+        document.getElementById('note').style.textAlign = alignType;
         let buttonsList = document.getElementByClassName('align');
         for(let i = 0; i < buttonsList.length; i++){
             buttonsList[i].classList.remove('active');
