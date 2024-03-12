@@ -61,9 +61,30 @@
 
     <div>
         <input class="text" id="title" placeholder="Title of the note">
+    </div>
+
+    <div id="ui-bar">
+        
+    
+        <div id = "mydiv">
+            <button class="custom-btn" onclick ="makeBold(this)"><i class="fas fa-solid fa-bold"></i></button>
+            <button class="custom-btn" onclick ="makeItalic(this)"><i class="fas fa-solid fa-italic"></i></button>
+            <button class="custom-btn" onclick ="makeUnderline(this)"><i class="fas fa-solid fa-underline"></i></button>
+            <button class="align custom-btn" onclick="alignText(this, 'left')"><i class="fas fa-solid fa-align-left"></i></button>
+            <button class="align custom-btn" onclick="alignText(this, 'center')"><i class="fas fa-solid fa-align-center"></i></button>
+            <button class="align custom-btn" onclick="alignText(this, 'right')"><i class="fas fa-solid fa-align-right"></i></button>
+        </div>
+    </div>
         <textarea id="note" cols="30" rows="10"></textarea>
         <div id="btn" class="btn">save</div>
     </div>
+
+    <div>
+        <script src="./uibar.js"></script>
+    </div>
+    
+
+
     <div id="list">
         <script src="./script.js"></script>
     </div>
