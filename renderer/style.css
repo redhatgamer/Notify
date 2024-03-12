@@ -280,7 +280,7 @@ label #cancel{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 20px 5px;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -290,7 +290,7 @@ label #cancel{
 
 .logo{
     font-size: 32px;
-    color: white;
+    color: transparent;
     text-decoration: none;
     font-weight: 700;
 }
@@ -308,11 +308,17 @@ label #cancel{
 .navbar a::before{
     content: '';
     position: absolute;
-    top: 0;
+    top: 100%;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 2px;
     background: white;
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+
 }
 
 /* #quitBtn
