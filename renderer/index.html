@@ -42,9 +42,47 @@
             <div id="nav"> <nav class="navbar">
                 <a href="#"><span id='current-date'></span></a>
                 <a href="#"><span id='current-time'></span></a>
-                <a href="#" id="accountBtn"><i class="fas fa-user"></i></a>
-            </nav></div>
-           
+                <a href="#" id="accountBtn"><i class="fas fa-user" onclick="toggleMenu()"></i></a>
+
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="images/profile-user.png">
+                            <h2>Carlos Mejia</h2>
+                        </div>
+                        <hr>
+
+                        <a href="#" class="sub-menu-link">
+                            <img src="images/user.png">
+                            <p>Edit Profile</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="images/setting.png">
+                            <p>Settings & Privacy</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="images/question.png">
+                            <p>Help & Support</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="images/setting.png">
+                            <p>Logout</p>
+                            <span>></span>
+                        </a>
+                    </div>
+                    <script>
+                        let subMenu = document.getElementById("subMenu");
+                        function toggleMenu(){
+                            subMenu.classList.toggle('open-menu');
+                        }
+                    </script>
+                </div>
+
+                
+            </nav>
         </header>
         </label>
 
@@ -87,7 +125,7 @@
                     <a href="#">Forgot password?</a>
                 </div>
 
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="loginBtn">Login</button>
 
                 <div class="register-link">
                     <p>Don't have an account? <a href="register.html">Register</a></p>
