@@ -473,7 +473,7 @@ label #cancel {
 }
 
 .sub-menu-wrap{
-    position: absolute;
+    position:fixed;
     top: 100%;
     right: 10%;
     width: 320px;

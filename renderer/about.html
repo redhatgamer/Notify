@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Developers' Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .post {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+        .developer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-right: 20px;
+        }
+        .developer img {
+            width: 150px; /* Adjust the width to make the circles bigger */
+            height: 150px; /* Adjust the height to make the circles bigger */
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 2px solid #ddd;
+        }
+        .developer h2 {
+            margin: 0;
+        }
+
+        .post {
+            justify-content:center;
+        }
+
+        #sidebar{
+            padding-top: 0px;
+        }
+    </style>
+    <style>
+        body{
+
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg/1200px-Vincent_van_Gogh_-_Almond_blossom_-_Google_Art_Project.jpg");
+            background-size: cover; /* Adjust to 'contain' if needed */
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-color: #f0f0f0;
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>About</h1>
+
+    <div class="post">
+        <div class="developer">
+            <img src="./pfp/carlosMejiapfp.jpeg">
+            <h2>Carlos Mejia</h2>
+            <p>the kid that fixes errors</p>
+        </div>
+        <div class="developer">
+            <img src="developer2.jpg">
+            <h2>Nicole Sanchez</h2>
+            <p>"<3"</p>
+        </div>
+    </div>
+
+</div>
+
+<input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>    
+
+<div class="sidebar">
+    <header>Hello, user!</header>
+    <ul>
+        <li><a href="#" id="newHomeBtn"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="#" id="newNoteBtn"><i class="fas fa-qrcode"></i>New Note</a></li>
+        <li><a href="#" id="newTodoBtn"><i class="fas fa-tasks"></i>New To-Do</a></li>
+        <li><a href="#" id="printBtn"><i class="fas fa-print"></i>Print</a></li>
+        <li><a href="#" id="aboutBtn"><i class="fas fa-info-circle"></i>About</a></li>
+        <li><a href="#" id="quitBtn"><i class="fas fa-times"></i>Quit</a></li>
+    </ul>
+
+    <div>
+        <script src="./sidebar.js"></script>
+    </div>
+</div>
+
+</body>
+</html>
