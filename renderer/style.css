@@ -425,7 +425,7 @@ label #cancel {
 }
 
 .sub-menu-wrap{
-    position: absolute;
+    position: relative;
     top: 100%;
     right: 10%;
     width: 320px;
@@ -453,6 +453,7 @@ label #cancel {
 }
 
 .sub-menu hr{
+    
     border: 0;
     height: 1px;
     width: 100%;
@@ -469,22 +470,22 @@ label #cancel {
 }
 
 .sub-menu-link p{
-    width: 100%;
+    width: 50%;
 }
 
-.sub-menu-wrap{
-    position:fixed;
-    top: 100%;
-    right: 10%;
+.sub-menu-wrap {
+    position: fixed;
+    position: relative; /* or position: fixed; depending on your requirements */
     width: 320px;
-    max-height: 0px;
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
+    z-index: 999; /* Set a high z-index value */
 }
+
 
 .sub-menu-wrap.open-menu{
     max-height: fit-content;
-
 }
 
 .sub-menu-link img{
