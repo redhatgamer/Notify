@@ -9,7 +9,7 @@ hours = hours % 12;
 hours = hours ? hours : 12;
 
 // Separate date and time
-var currentDate = month + ' ' + day + 'th';
+var currentDate = month + ' ' + day + '';
 var currentTime = hours + ':' + (minutes < 10 ? '0' + minutes : minutes) + ' ' + ampm;
 
 document.getElementById('current-date').innerHTML = currentDate;
