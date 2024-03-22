@@ -13,6 +13,12 @@ document.getElementById('newHomeBtn').addEventListener('click', function() {
     window.location.href = "index.html";
 });
 
+document.getElementById('aboutBtn').addEventListener('click', function() {
+    window.location.href = "about.html";
+});
+
+
+
 document.getElementById('quitBtn').addEventListener('click', function() {
     const confirmed = confirm('Are you sure you want to quit?');
         

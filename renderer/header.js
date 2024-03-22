@@ -1,15 +1,15 @@
 
 var dt = new Date();
-var month = dt.toLocaleString('default', { month: 'long' }); // Get full month name
-var day = dt.getDate(); // Get day of the month
-var hours = dt.getHours(); // Get hours
-var minutes = dt.getMinutes(); // Get minutes
-var ampm = hours >= 12 ? 'PM' : 'AM'; // Determine if it's AM or PM
-hours = hours % 12; // Convert to 12-hour format
-hours = hours ? hours : 12; // Handle midnight (0 hours)
+var month = dt.toLocaleString('default', { month: 'long' }); 
+var day = dt.getDate(); 
+var hours = dt.getHours(); 
+var minutes = dt.getMinutes(); 
+var ampm = hours >= 12 ? 'PM' : 'AM'; 
+hours = hours % 12; 
+hours = hours ? hours : 12;
 
 // Separate date and time
-var currentDate = month + ' ' + day + 'th';
+var currentDate = month + ' ' + day + '';
 var currentTime = hours + ':' + (minutes < 10 ? '0' + minutes : minutes) + ' ' + ampm;
 
 document.getElementById('current-date').innerHTML = currentDate;
